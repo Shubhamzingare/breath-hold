@@ -3,11 +3,13 @@ import { HabuildLogo } from './components/HabuildLogo';
 import { Play, Square, RotateCcw } from 'lucide-react';
 import { FeedbackText } from './components/FeedbackText';
 import { ShareButtons } from './components/ShareButtons';
+import { WelcomeModal } from './components/WelcomeModal';
 
 function App() {
   const [time, setTime] = useState<number>(0);
   const [isRunning, setIsRunning] = useState<boolean>(false);
   const [bestTime, setBestTime] = useState<number>(0);
+  const [showWelcomeModal, setShowWelcomeModal] = useState(true);
 
   useEffect(() => {
     const saved = localStorage.getItem('bestTime');
@@ -23,6 +25,13 @@ function App() {
     }
     return () => clearInterval(interval);
   }, [isRunning]);
+
+  useEffect(() => {
+    const userDetails = localStorage.getItem('userDetails');
+    if (userDetails) {
+      setShowWelcomeModal(false);
+    }
+  }, []);
 
   const handleStart = () => setIsRunning(true);
   const handleStop = () => {
@@ -64,8 +73,13 @@ function App() {
     window.open(`https://wa.me/?text=${encodeURIComponent(text + ' ' + window.location.href)}`, '_blank');
   };
 
+  const handleWelcomeComplete = () => {
+    setShowWelcomeModal(false);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#25D366] to-[#128C7E]">
+      {showWelcomeModal && <WelcomeModal onComplete={handleWelcomeComplete} />}
       <main className="container mx-auto px-4 py-8 flex flex-col items-center justify-center min-h-screen">
         <div className="bg-white/95 backdrop-blur-lg rounded-3xl p-8 w-full max-w-md shadow-2xl">
           <HabuildLogo />
@@ -105,12 +119,12 @@ function App() {
 
             {time > 0 && !isRunning && (
               <>
-                <FeedbackText time={time} />
                 <ShareButtons 
                   time={time}
                   onShare={handleShare}
                   onWhatsAppShare={handleWhatsAppShare}
                 />
+                <FeedbackText time={time} />
               </>
             )}
 
