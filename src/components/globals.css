@@ -1,0 +1,22 @@
+/* Custom styles for the phone input */
+.react-phone-input-2.focused {
+    border-color: #25D366 !important;
+    box-shadow: 0 0 0 1px #25D366 !important;
+  }
+  
+  .react-phone-input-2 .selected-flag:hover,
+  .react-phone-input-2 .selected-flag:focus {
+    background-color: transparent !important;
+  }
+  
+  .react-phone-input-2 .country-list {
+    width: 300px;
+  }
+  
+  .react-phone-input-2 .country-list .country:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .react-phone-input-2 .country-list .country.highlight {
+    background-color: #25D366;
+  }
