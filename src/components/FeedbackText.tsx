@@ -13,28 +13,28 @@ export const FeedbackText: React.FC<FeedbackTextProps> = ({ time }) => {
   let colorClass = '';
 
   if (seconds <= 10) {
-    message = `Great start! You held your breath for ${seconds.toFixed(1)} seconds. Keep practicing, and you'll improve in no time! 🌟`;
+    message = `Great start! You held your breath for ${seconds.toFixed(1)} seconds. Every second builds strength. 🌟\\nShare your milestone and inspire others!`;
     colorClass = "text-yellow-600";
   } else if (seconds <= 20) {
-    message = `You're doing great! ${seconds.toFixed(1)} seconds is a fantastic milestone. Stay consistent, and you'll go even further! 💪`;
+    message = `You're doing great! ${seconds.toFixed(1)} seconds is a fantastic! 💪\\nChallenge friends to beat your time!`;
     colorClass = "text-green-500";
   } else if (seconds <= 30) {
-    message = `Impressive! You've reached ${seconds.toFixed(1)} seconds—most people stop here, but not you. Keep pushing your limits! 🚀`;
+    message = `Impressive! ${seconds.toFixed(1)} seconds is a big step! 🚀\\nShare this achievement with your circle!`;
     colorClass = "text-green-600";
   } else if (seconds <= 45) {
-    message = `Amazing progress! You're now holding for ${seconds.toFixed(1)} seconds. With this determination, you'll soon surpass a full minute. 🌟`;
+    message = `Amazing! You held for ${seconds.toFixed(1)} seconds. 🌟\\nTell friends—they’ll want to try too!`;
     colorClass = "text-blue-500";
   } else if (seconds <= 60) {
-    message = `${seconds.toFixed(1)} seconds! You've reached an incredible milestone. This is where champions begin. Keep it up! 🏆`;
+    message = `${seconds.toFixed(1)} seconds—an incredible milestone! 🏆\\nShare your win and motivate others!`;
     colorClass = "text-blue-600";
   } else if (seconds <= 90) {
-    message = `You're in the top tier! ${seconds.toFixed(1)} seconds shows incredible focus and stamina. Imagine where you'll be with consistent effort! 🔥`;
+    message = `Top tier! ${seconds.toFixed(1)} seconds of pure stamina! 🔥\\nShow friends and inspire their journey!`;
     colorClass = "text-purple-500";
   } else if (seconds <= 120) {
-    message = `${seconds.toFixed(1)} seconds—this is mastery in action! Your lungs and mind are stronger than ever. Keep inspiring yourself! ✨`;
+    message = `${seconds.toFixed(1)} seconds—true mastery in action! ✨\\nShare your success and spread motivation!`;
     colorClass = "text-purple-600";
   } else {
-    message = `Incredible ${seconds.toFixed(1)} seconds! You're in elite territory! Breathing is life, and you've just mastered holding it with grace and strength. Keep conquering! 🌈`;
+    message = `Incredible ${seconds.toFixed(1)} seconds. Your strength is unmatched! 🌈\\nInspire others by sharing this now!`;
     colorClass = "text-indigo-600";
   }
 

@@ -20,10 +20,12 @@ export const HabuildLogo: React.FC = () => {
 
       <div className="text-base text-gray-500 flex flex-col gap-4 items-center">
         <div className="flex items-center gap-3 hover:text-gray-700 transition-colors duration-200">
-          <span className="font-medium">1. Take a deep breath in</span>
+          <span className="font-medium">1. Take a deep breath in & breathe out</span>
         </div>
         <div className="flex items-center gap-3 hover:text-gray-700 transition-colors duration-200">
-          <span className="font-medium">2. Hold your breath and click start</span>
+          <span className="font-medium">2. Hold your breath & click start</span>
+          <div className="flex items-center gap-3 hover:text-gray-700 transition-colors duration-200"></div>
+          <span className="font-medium">3. Click stop when you lose breath</span>
         </div>
       </div>
     </div>
