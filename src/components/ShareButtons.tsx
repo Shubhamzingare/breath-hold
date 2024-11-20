@@ -56,13 +56,14 @@ export const ShareButtons: React.FC<ShareButtonsProps> = ({ time, onShare, onWha
     } catch (error) {
       if (shareType === 'share') {
         await onShare();
+        setShowModal(false);
       } else if (shareType === 'whatsapp') {
         onWhatsAppShare();
+        setShowModal(false);
       }
       console.error('Error storing phone number---------->', error);
     } finally {
       setIsSubmitting(false);
-      setShowModal(false);
     }
   };
 
