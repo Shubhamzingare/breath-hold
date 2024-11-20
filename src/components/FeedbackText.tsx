@@ -40,10 +40,10 @@ export const FeedbackText: React.FC<FeedbackTextProps> = ({ time }) => {
 
   return (
     <div className="text-center my-4 animate-fade-in">
-      <p className={`${colorClass} font-medium whitespace-wrap`}>
+      <p className={`${colorClass} font-normal whitespace-wrap`}>
         {message[0]}
       </p>
-      <p className={`text-grey-400 font-medium whitespace-wrap`}>{message[1]}</p>
+      <p className={`text-grey-400 font-normal whitespace-wrap`}>{message[1]}</p>
     </div>
   );
 };

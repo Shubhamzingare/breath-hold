@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { HabuildLogo } from './components/HabuildLogo';
-import { Play, Pause, RotateCcw } from 'lucide-react';
+import { Play, Square, RotateCcw } from 'lucide-react';
 import { FeedbackText } from './components/FeedbackText';
 import { ShareButtons } from './components/ShareButtons';
 
@@ -79,7 +79,7 @@ function App() {
               </div>
             </div>
 
-            <div className="flex justify-center gap-4 mb-8">
+            <div className="flex justify-center gap-4 mb-4">
               {!isRunning ? (
                 <button
                   onClick={handleStart}
@@ -92,7 +92,7 @@ function App() {
                   onClick={handleStop}
                   className="bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full p-4 transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
-                  <Pause className="w-8 h-8" />
+                  <Square className="w-8 h-8" />
                 </button>
               )}
               <button
