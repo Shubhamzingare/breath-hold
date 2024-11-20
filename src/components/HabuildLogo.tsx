@@ -24,9 +24,10 @@ export const HabuildLogo: React.FC = () => {
         </div>
         <div className="flex items-center gap-3 hover:text-gray-700 transition-colors duration-200">
           <span className="font-medium">2. Hold your breath & click start</span>
-          <div className="flex items-center gap-3 hover:text-gray-700 transition-colors duration-200"></div>
-          <span className="font-medium">3. Click stop when you lose breath</span>
         </div>
+        <div className="flex items-center gap-3 hover:text-gray-700 transition-colors duration-200">
+          <span className="font-medium">3. Click stop when you lose breath</span>
+          </div>
       </div>
     </div>
   );
